@@ -1,0 +1,27 @@
+[project]
+name = "internal-engineering-meeting-skip-gram-demo"
+version = "0.1.0"
+description = "Skip-Gram Demo for Internal Engineering Meeting"
+authors = [{ name = "Josh Crosby", email = "jcrosby@innovativesol.com" }]
+dependencies = [
+    "numpy>=1.18.5,<2.0",
+    "gensim==4.3.3",
+    "matplotlib>=3.9.2",
+    "ruff>=0.6.2",
+]
+readme = "README.md"
+requires-python = ">= 3.12"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.rye]
+managed = true
+dev-dependencies = []
+
+[tool.hatch.metadata]
+allow-direct-references = true
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/internal_engineering_meeting_skip_gram_demo"]
